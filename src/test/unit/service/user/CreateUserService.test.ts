@@ -2,7 +2,7 @@ import { CreateUserService } from "@service/user/CreateUserService";
 import { UserRepository } from "@repository/UserRepository";
 import { User } from "@entity/User";
 
-jest.mock("../../../../repository/UserRepository", () => ({
+jest.mock("@repository/UserRepository", () => ({
     UserRepository: jest.fn().mockImplementation(() => ({
         findOneById: (id: number) => new User({ id, name: "test", email: "test@test.com" }),
         persist: (user: User) => {
@@ -11,7 +11,7 @@ jest.mock("../../../../repository/UserRepository", () => ({
     })),
 }));
 
-describe("Create Example Service", () => {
+describe("Create User Service", () => {
     const repository = new UserRepository();
     const service = new CreateUserService(repository);
 
