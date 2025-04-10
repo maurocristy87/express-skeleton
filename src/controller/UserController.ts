@@ -24,7 +24,7 @@ export class UserController {
 
     public getUserById(req: Request, res: Response) {
         const user = this.repository.find(parseInt(req.params.id));
-        if (!user) throw new NotFoundException("User not foud");
+        if (!user) throw new NotFoundException("User not found");
         res.status(200).send(user);
     }
 }
