@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "commonjs",
+        "strict": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "baseUrl": "./src",
+        "outDir": "dist",
+        "strictPropertyInitialization": false,
+        "paths": {
+            "@entity/*": ["entity/*"],
+            "@exception/*": ["exception/*"],
+            "@controller/*": ["controller/*"],
+            "@repository/*": ["repository/*"],
+            "@service/*": ["service/*"]
+        }
+    },
+    "include": ["src/**/*"]
+}
